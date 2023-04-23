@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 //import reset from 'styled-reset';
-
 const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
@@ -12,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
         //-ms-overflow-style: none;
         margin:0px;
         width:100%;
+        background-color: rgba(18,18,18,0.98);
+        z-index: -100;
         /* min-width: 400px;
         height: 100vh;
         display: flex;
