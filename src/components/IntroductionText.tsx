@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
 const Text = styled.h2`
-  color: white;
-  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
   text-align: center;
+  font-family: 'Gamja Flower', cursive;
 `;
+/*
+font-family: 'IBM Plex Sans KR', sans-serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+*/
 
 const IntroductionText = () => {
   return (
