@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         //-ms-overflow-style: none;
         margin:0px;
         width:100%;
-        background-color: rgba(18,18,18,0.98);
+        background-color: rgba(18,18,18,0.97);
         z-index: -100;
         /* min-width: 400px;
         height: 100vh;
