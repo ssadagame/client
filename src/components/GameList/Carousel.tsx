@@ -48,21 +48,22 @@ const Price = styled.div`
       width: 60px;
       height: 30px;
       text-align: center;
-      line-height: 30px;
+      line-height: 32px;
       background-color: RGB(0, 116, 228);
-      font-size: 1.3vw;
+      font-size: 20px;
       margin-right: 5px;
     }
     &.cost {
       text-decoration: line-through;
       margin-right: 5px;
+      font-size: 1.2vw;
       color: rgba(255, 255, 255, 0.4);
     }
     &.discount {
     }
   }
 `;
-const GameList = styled.div``;
+const Games5List = styled.div``;
 const Game = styled.div``;
 const Carousel = () => {
   return (
@@ -79,13 +80,13 @@ const Carousel = () => {
         </ImgBoxDetail>
       </ImgBox>
 
-      <GameList>
+      <Games5List>
         목록 박스
         <Game>게임1</Game>
         <Game>게임2</Game>
         <Game>게임3</Game>
         <Game>게임4</Game>
-      </GameList>
+      </Games5List>
     </Back>
   );
 };
