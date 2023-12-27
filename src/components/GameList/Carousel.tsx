@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import test_img from '../../assets/img/배틀그라운드_중.jpeg';
+import Game5List from './Game5List';
 const Back = styled.section`
-  width: 70%;
-  height: 300px;
+  width: 85%;
+  height: 350px;
   border: 1px solid;
   //background-color: white;
   margin-top: 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 10px;
 `;
 // const Box = styled.div``;
 const ImgBox = styled.div`
@@ -14,7 +17,7 @@ const ImgBox = styled.div`
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 25px;
-  width: 68%;
+  /* width: 70%; */
 `;
 const Img = styled.img`
   width: 100%;
@@ -48,22 +51,22 @@ const Price = styled.div`
       width: 60px;
       height: 30px;
       text-align: center;
-      line-height: 30px;
+      line-height: 32px;
       background-color: RGB(0, 116, 228);
-      font-size: 1.3vw;
+      font-size: 20px;
       margin-right: 5px;
     }
     &.cost {
       text-decoration: line-through;
       margin-right: 5px;
+      font-size: 1.2vw;
       color: rgba(255, 255, 255, 0.4);
     }
     &.discount {
     }
   }
 `;
-const GameList = styled.div``;
-const Game = styled.div``;
+
 const Carousel = () => {
   return (
     <Back>
@@ -78,14 +81,7 @@ const Carousel = () => {
           </Price>
         </ImgBoxDetail>
       </ImgBox>
-
-      <GameList>
-        목록 박스
-        <Game>게임1</Game>
-        <Game>게임2</Game>
-        <Game>게임3</Game>
-        <Game>게임4</Game>
-      </GameList>
+      <Game5List />
     </Back>
   );
 };
