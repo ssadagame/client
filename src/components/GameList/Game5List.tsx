@@ -1,12 +1,43 @@
 import styled from 'styled-components';
-const Games = styled.div``;
-const Background = styled.section``;
+import { game5dumy } from './Dumy/Game5dumy';
+const Games = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  cursor: pointer;
+`;
+const Background = styled.section`
+  background-color: white;
+  display: grid;
+`;
+const Screenshot = styled.div`
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const GameName = styled.div`
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 //인기 게임 5개 목록 만들기
 const Game5List = () => {
-  const arrTest = [{ a: '안녕' }, { a: '바이' }, { a: '로롤' }];
+  const arr = [
+    { screen: '사진', name: '게임1' },
+    { screen: '사진', name: '게임2' },
+    { screen: '사진', name: '게임3' },
+    { screen: '사진', name: '게임4' },
+    { screen: '사진', name: '게임5' },
+  ];
   return (
     <Background>
-      <Games>안녕</Games>
+      {arr.map((el, id) => (
+        <Games key={id}>
+          <Screenshot>{el.screen}</Screenshot>
+          <GameName>{el.name}</GameName>
+        </Games>
+      ))}
     </Background>
   );
 };
