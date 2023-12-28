@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import test_img from '../../assets/img/배틀그라운드_중.jpeg';
 import Game5List from './Game5List';
+import { useRecoilValue } from 'recoil';
+import { dumySelector } from '../../recoil/store';
 const Back = styled.section`
   width: 85%;
   height: 350px;
@@ -68,16 +70,17 @@ const Price = styled.div`
 `;
 
 const Carousel = () => {
+  const viewGame = useRecoilValue(dumySelector);
   return (
     <Back>
       <ImgBox>
-        <Img src={test_img} alt="test" />
+        <Img src={viewGame.screenshop} alt="test" />
         <ImgBoxDetail>
-          <div className="name">PUBG: BATTLEGROUNDS</div>
+          <div className="name">{viewGame.name}</div>
           <Price>
-            <div className="icon">50%</div>
-            <div className="cost">50,000원</div>
-            <div className="discount">25,000원</div>
+            <div className="icon">{viewGame.discount}</div>
+            <div className="cost">{viewGame.original_price}원</div>
+            <div className="discount">{viewGame.final_price}원</div>
           </Price>
         </ImgBoxDetail>
       </ImgBox>

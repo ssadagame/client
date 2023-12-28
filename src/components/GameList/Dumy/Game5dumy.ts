@@ -9,6 +9,15 @@ export const game5dumy = [
     discount: '50%',
   },
   {
+    id: 4,
+    name: 'Dead Island 2',
+    screenshop:
+      'https://cdn2.unrealengine.com/egs-dead-island-2-launch-carousel-desktop-1920x1080-ac0376f37f14.jpg?h=720&quality=medium&resize=1&w=1280',
+    original_price: '65000',
+    final_price: '32500',
+    discount: '60%',
+  },
+  {
     id: 1,
     name: 'EA SPORTS FC 24',
     screenshop:
@@ -26,11 +35,12 @@ export const game5dumy = [
     final_price: '49200',
     discount: '10%',
   },
+
   {
-    id: 4,
-    name: 'Dead Island 2',
+    id: 2,
+    name: 'LOTR: Return to Moria',
     screenshop:
-      'https://cdn2.unrealengine.com/egs-dead-island-2-launch-carousel-desktop-1920x1080-ac0376f37f14.jpg?h=720&quality=medium&resize=1&w=1280',
+      'https://cdn2.unrealengine.com/egs-lotr-return-to-moria-carousel-desktop-1920x1080-a3ae08411ddb.jpg?h=720&quality=medium&resize=1&w=1280',
     original_price: '65000',
     final_price: '32500',
     discount: '60%',

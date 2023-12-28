@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './page/Home';
 import GameList from './page/GameList';
-
+// Suspense 적용하기
 const Router = () => {
   return (
     <BrowserRouter>
