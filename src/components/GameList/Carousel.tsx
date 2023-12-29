@@ -1,8 +1,17 @@
-import styled from 'styled-components';
-import test_img from '../../assets/img/배틀그라운드_중.jpeg';
+import styled, { keyframes } from 'styled-components';
 import Game5List from './Game5List';
 import { useRecoilValue } from 'recoil';
 import { dumySelector } from '../../recoil/store';
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    width: 10%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+`;
 const Back = styled.section`
   width: 85%;
   height: 350px;
@@ -15,10 +24,12 @@ const Back = styled.section`
 `;
 // const Box = styled.div``;
 const ImgBox = styled.div`
+  animation: ${fadeIn} 5s ease-in;
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 25px;
+
   /* width: 70%; */
 `;
 const Img = styled.img`

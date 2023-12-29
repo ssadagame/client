@@ -24,8 +24,8 @@ export const dumySelector = selector({
   get: ({ get }) => {
     const dumyTest = get(dumyGame5List);
     const num = get(numberAtom);
-    const result = dumyTest.filter((el) => el.id === num);
-    return result[0];
+    // const result = dumyTest.filter((el) => el.id === num);
+    return dumyTest[num];
   },
 });
 
