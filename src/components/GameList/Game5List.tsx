@@ -18,12 +18,17 @@ const TestBox = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0.4;
+  border-radius: 12px;
+  z-index: -1;
 `;
-const Games = styled.div`
+const Games = styled.div<{ test123: boolean }>`
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   cursor: pointer;
   position: relative;
+  border-radius: 12px;
+  /* numSelect == 번호 같으면 아래 스타일 보여주기 */
+  /* background-color: ${(test123) => (test123 ? 'red' : 'bole')}; */
 `;
 const Background = styled.section`
   /* background-color: white; */
@@ -32,19 +37,19 @@ const Background = styled.section`
 `;
 const Screenshot = styled.img`
   padding: 5px;
-  border: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  border-radius: 12px;
 `;
 const GameName = styled.div`
   padding: 5px;
-  border: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 `;
 //인기 게임 5개 목록 만들기
 //순수 함수란?
@@ -68,7 +73,11 @@ const Game5List = () => {
   return (
     <Background>
       {dumyData.map((el, idx) => (
-        <Games key={el.id} onClick={() => setNumSelect(idx)}>
+        <Games
+          key={el.id}
+          onClick={() => setNumSelect(idx)}
+          test123={numSelect === idx}
+        >
           {numSelect === idx && <TestBox />}
           <Screenshot src={el.screenshop} />
           <GameName>{el.name}</GameName>
