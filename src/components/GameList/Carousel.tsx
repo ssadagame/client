@@ -3,12 +3,11 @@ import Game5List from './Game5List';
 import { useRecoilValue } from 'recoil';
 import { dumySelector } from '../../recoil/store';
 
-const Back = styled.section`
+const CarouselBack = styled.section`
   width: 75%;
-  height: 290px;
+  /* height: 290px; */
   /* border: 1px solid; */
   //background-color: white;
-  margin-top: 20px;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   grid-gap: 10px;
@@ -28,7 +27,7 @@ const ImgBox = styled.div`
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 25px;
-
+  height: 100%;
   /* transition: ease-out 1s;
   transform: translateX(-50px); */
 
@@ -90,7 +89,7 @@ const Price = styled.div`
 const Carousel = () => {
   const viewGame = useRecoilValue(dumySelector);
   return (
-    <Back>
+    <CarouselBack>
       <ImgBox>
         <Img src={viewGame.screenshop} alt="test" />
         <ImgBoxDetail>
@@ -103,7 +102,7 @@ const Carousel = () => {
         </ImgBoxDetail>
       </ImgBox>
       <Game5List />
-    </Back>
+    </CarouselBack>
   );
 };
 

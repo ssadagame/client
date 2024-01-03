@@ -1,10 +1,21 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Carousel from '../components/GameList/Carousel';
+import Game100List from '../components/GameList/Game100List';
 
 const Back = styled.div`
   height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
 `;
+const Subheading = styled.div`
+  width: 75%;
+  color: rgba(255, 255, 255, 0.8);
+`;
+
 const GamesIntroBox = styled.section`
   display: flex;
   align-items: center;
@@ -15,12 +26,14 @@ const GameList = () => {
   return (
     <Back>
       <Header />
-      <GamesIntroBox>
-        {/* 1. 게임 Carousel
+      <Subheading>인기게임 Top 5</Subheading>
+      {/* <GamesIntroBox> */}
+      {/* 1. 게임 Carousel
             2. 인기게임 100 */}
-        <Carousel />
-        <div>{/* 게임 리스트 쭈루루루 */}</div>
-      </GamesIntroBox>
+      <Carousel />
+      <Subheading>인기게임 Top 100</Subheading>
+      <Game100List />
+      {/* </GamesIntroBox> */}
       {/* 최근본 게임 컴포넌트 */}
     </Back>
   );
