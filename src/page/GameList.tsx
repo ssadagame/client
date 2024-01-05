@@ -3,8 +3,8 @@ import Header from '../components/Header';
 import Carousel from '../components/GameList/Carousel';
 import Game100List from '../components/GameList/Game100List';
 
-const Back = styled.div`
-  height: 100vh;
+const Back = styled.section`
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
