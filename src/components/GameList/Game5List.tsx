@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
-import { dumyGame5List, numberAtom } from '../../recoil/store';
+import {
+  dumyGame5List,
+  dumyGame5ListSelector,
+  numberAtom,
+} from '../../recoil/store';
 import { useRecoilValue, useRecoilState } from 'recoil';
 import { memo, useEffect, useMemo } from 'react';
 const testKeyframes = keyframes`
@@ -57,7 +61,7 @@ const GameName = styled.div`
 //단방향 React만 사용시 props drilling 문제 발생, 랜더링도 관련된 페이지 다되서 불필요
 //그래서 전역 상태관리 라이브러리 사용
 const Game5List = () => {
-  const dumyData = useRecoilValue(dumyGame5List);
+  const dumyData = useRecoilValue(dumyGame5ListSelector);
   const [numSelect, setNumSelect] = useRecoilState(numberAtom);
   // 구현하고싶은것 5게임 목록중 하나만 애니메이션 효과주고 그 애니메이션 효과 끝나면 다음 게임항목 애니메이션 적용
   // 1. 목록을 지정해주는 상태(번호,숫자) 만들기

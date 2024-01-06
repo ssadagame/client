@@ -13,6 +13,16 @@ export const dumyGame5List = atom<TypeDumy[]>({
   key: 'dumyGame5List',
   default: game5dumy,
 });
+export const dumyGame5ListSelector = selector({
+  key: 'dumy5gamelist',
+  get: ({ get }) => {
+    const dumyTest = get(dumyGame5List);
+    const newArrDumy = dumyTest.filter((_, idx) => {
+      return idx < 5;
+    });
+    return newArrDumy;
+  },
+});
 
 export const numberAtom = atom({
   key: 'numberAtom',
