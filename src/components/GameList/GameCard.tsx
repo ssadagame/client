@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import TypeList from '../TypeList';
+import { useNavigate } from 'react-router-dom';
 
 const Back = styled.div`
   /* border: 1px solid rgba(255, 255, 255, 0.7); */
@@ -11,14 +12,17 @@ const Back = styled.div`
   align-items: center;
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 25px;
+  transition: all 1s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   &:hover {
     cursor: pointer;
+    transform: translateY(-10px);
   }
 `;
 
 const Img = styled.img`
   width: 100%;
-  height: 160px;
+  /* height: 160px; */
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
 `;
@@ -39,11 +43,20 @@ const ImgBoxDetail = styled.div`
     &.final_price {
     }
   }
+  &:hover {
+    height: 300px;
+    border: 1px solid;
+  }
 `;
 
 const GameCard = ({ gameList }: TypeList.TypeProps) => {
+  const navigate = useNavigate();
   return (
-    <Back>
+    <Back
+      onClick={() => {
+        navigate(`/gamePage/${gameList.id}`);
+      }}
+    >
       <Img src={gameList.screenshop} alt="test" />
       <ImgBoxDetail>
         <div className="name">{gameList.name}</div>
