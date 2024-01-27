@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import Game5List from './Game5List';
 import { useRecoilValue } from 'recoil';
 import { dumySelector } from '../../recoil/store';
+import { useNavigate } from 'react-router-dom';
 
 const CarouselBack = styled.section`
   width: 75%;
@@ -12,26 +13,16 @@ const CarouselBack = styled.section`
   grid-template-columns: 2.5fr 1fr;
   grid-gap: 10px;
 `;
-// const Box = styled.div``;
-// const fadeIn = keyframes`
-//   0% {
-//     /* opacity: 0; */
-//   }
-//   100% {
-//     /* opacity: 1; */
-//     width: 1%;
-//   }
-// `;
+
 const ImgBox = styled.div`
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 25px;
   height: 100%;
-  /* transition: ease-out 1s;
-  transform: translateX(-50px); */
-
-  /* width: 70%; */
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const Img = styled.img`
   width: 100%;
@@ -87,10 +78,11 @@ const Price = styled.div`
 `;
 
 const Carousel = () => {
+  const navigate = useNavigate();
   const viewGame = useRecoilValue(dumySelector);
   return (
     <CarouselBack>
-      <ImgBox>
+      <ImgBox onClick={() => navigate(`/gamePage/${viewGame.id}`)}>
         <Img src={viewGame.screenshop} alt="test" />
         <ImgBoxDetail>
           <div className="name">{viewGame.name}</div>
