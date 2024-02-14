@@ -28,6 +28,10 @@ export const numberAtom = atom({
   key: 'numberAtom',
   default: 0,
 });
+export const gameSelect = atom({
+  key: 'gameSelect',
+  default: null,
+});
 
 export const dumySelector = selector({
   key: 'dumySelector',
@@ -37,6 +41,7 @@ export const dumySelector = selector({
     // const result = dumyTest.filter((el) => el.id === num);
     return dumyTest[num];
   },
+  set: ({ set }) => {},
 });
 
 // export const testText = atom({

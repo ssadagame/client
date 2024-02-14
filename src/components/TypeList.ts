@@ -16,5 +16,11 @@ namespace TypeList {
   export interface TypeProps {
     gameList: TypeGameList;
   }
+  export interface TypeGame {
+    id: number;
+    title: string;
+    genre: string[];
+    screenshops: string[];
+  }
 }
 export default TypeList;

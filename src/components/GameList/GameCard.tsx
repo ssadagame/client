@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import TypeList from '../TypeList';
+import { useNavigate } from 'react-router-dom';
 
 const Back = styled.div`
   /* border: 1px solid rgba(255, 255, 255, 0.7); */
@@ -45,13 +46,17 @@ const ImgBoxDetail = styled.div`
   &:hover {
     height: 300px;
     border: 1px solid;
-    background-color: red;
   }
 `;
 
 const GameCard = ({ gameList }: TypeList.TypeProps) => {
+  const navigate = useNavigate();
   return (
-    <Back>
+    <Back
+      onClick={() => {
+        navigate(`/gamePage/${gameList.id}`);
+      }}
+    >
       <Img src={gameList.screenshop} alt="test" />
       <ImgBoxDetail>
         <div className="name">{gameList.name}</div>
