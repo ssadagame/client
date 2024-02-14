@@ -7,6 +7,20 @@ export const game5dumy = [
     original_price: '50000',
     final_price: '25000',
     discount: '50%',
+    // title: ['슈팅', '액션', 'FPS', '1인칭 슈팅게임'],
+    // screenshops: [
+    //   'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+    //   'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+    //   'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+    //   'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+    //   'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+    // ],
+    // shops: [
+    //   { name: 'steam', price: '50000' },
+    //   { name: 'greenGames', price: '40000' },
+    //   { name: 'yunhoGames', price: '150000' },
+    //   { name: 'giung', price: '250000' },
+    // ],
   },
   {
     id: 4,
