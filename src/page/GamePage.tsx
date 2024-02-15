@@ -27,15 +27,12 @@ const Box = styled.section`
 `;
 
 const Main = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  row-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   border: 1px solid;
   color: white;
   width: 80%;
-  height: 60%;
+  height: 70%;
 `;
 
 // 게임 정보 요청
@@ -51,8 +48,9 @@ const GamePage = () => {
         <Box>
           <Title dumyTitle={dumy[0].title} dumyGenre={dumy[0].genre} />
           <Main>
-            <ImgBox />
+            <ImgBox dumyImg={dumy[0].screenshops} />
             <PriceList />
+            가격정보 더미 보내기
           </Main>
         </Box>
       </Back>

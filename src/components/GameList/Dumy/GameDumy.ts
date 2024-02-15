@@ -5,10 +5,10 @@ export const gamesDumy = [
     genre: ['슈팅', '생존', 'FPS', '1인칭 슈팅', '멀티 게임'],
     screenshops: [
       'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+      'https://cdn2.unrealengine.com/egs-dead-island-2-launch-carousel-desktop-1920x1080-ac0376f37f14.jpg?h=720&quality=medium&resize=1&w=1280',
       'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
       'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
-      'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
-      'https://cdn2.unrealengine.com/egs-alan-wake-2-carousel-desktop-1248x702-c7cb2980c2a2.jpg?h=720&quality=medium&resize=1&w=1280',
+      'https://cdn2.unrealengine.com/fc24se-epic-merch-feature-carousel-desktop-1248x702-1248x702-51e411bd25db.png?h=720&quality=medium&resize=1&w=1280',
     ],
   },
   {
