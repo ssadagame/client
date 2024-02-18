@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Title } from '../components/GamePage/Title';
 import { ImgBox } from '../components/GamePage/ImgBox';
 import { PriceList } from '../components/GamePage/PriceList';
+import { TransitionTest } from '../components/TransitionTest';
 const Back = styled.section`
   height: 100vh;
   width: 100%;
@@ -44,6 +45,7 @@ const GamePage = () => {
   return (
     <>
       <Header />
+      <TransitionTest />
       <Back>
         <Box>
           <Title dumyTitle={dumy[0].title} dumyGenre={dumy[0].genre} />

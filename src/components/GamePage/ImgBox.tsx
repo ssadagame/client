@@ -11,6 +11,10 @@ const Back = styled.div`
 const MainImg = styled.img`
   width: 100%;
   padding: 25px;
+  transition: opacity 100ms ease-in-out;
+  &:hover {
+    transform: translateX(100px);
+  }
 `;
 const SideImg = styled.div`
   border: 1px solid;
@@ -22,7 +26,6 @@ const SideImg = styled.div`
   > img {
     border: 1px solid;
     width: 10%;
-    transition: 3ms;
   }
 `;
 // React Transition Group  라이브러리 사용해보기 출처 https://velog.io/@ljw4536/react-transition-group-%EC%9C%BC%EB%A1%9C-%ED%99%94%EB%A9%B4%EC%9D%84-%EB%B6%80%EB%93%9C%EB%9F%BD%EA%B2%8C-%EC%A0%84%ED%99%98%EC%8B%9C%ED%82%A4%EA%B8%B0
